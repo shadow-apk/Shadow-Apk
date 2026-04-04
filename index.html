@@ -1,0 +1,97 @@
+html
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shadow Private Store</title>
+    <!-- আইকনের জন্য নিচের লাইনটি দরকার -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #0f172a; color: #f8fafc; margin: 0; padding: 20px; }
+        .container { max-width: 500px; margin: 0 auto; }
+        header { text-align: center; padding: 30px 0; border-bottom: 1px solid #1e293b; margin-bottom: 20px; }
+        header h1 { color: #38bdf8; margin: 0; font-size: 26px; letter-spacing: 1px; }
+        header p { color: #94a3b8; font-size: 14px; margin-top: 5px; }
+        
+        .app-list { margin-top: 10px; }
+        .app-item { 
+            background: #1e293b; 
+            border-radius: 15px; 
+            padding: 15px; 
+            margin-bottom: 15px; 
+            display: flex; 
+            align-items: center; 
+            justify-content: space-between;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            border: 1px solid #334155;
+        }
+        
+        .app-info { display: flex; align-items: center; }
+        .app-icon { 
+            width: 50px; height: 50px; 
+            background: linear-gradient(135deg, #38bdf8, #818cf8); 
+            border-radius: 12px; 
+            margin-right: 15px; 
+            display: flex; align-items: center; justify-content: center; font-size: 24px; color: white;
+        }
+        
+        .app-details h3 { margin: 0; font-size: 17px; color: #f1f5f9; }
+        .app-details p { margin: 3px 0 0; font-size: 12px; color: #94a3b8; }
+        
+        .btn-download { 
+            background-color: #0ea5e9; 
+            color: white; 
+            text-decoration: none; 
+            padding: 10px 20px; 
+            border-radius: 25px; 
+            font-size: 14px; 
+            font-weight: bold;
+            transition: 0.2s;
+        }
+        .btn-download:active { transform: scale(0.9); background-color: #0284c7; }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <header>
+        <h1>SHADOW STORE</h1>
+        <p>আপনার পার্সোনাল অ্যাপ রিপোজিটরি</p>
+    </header>
+
+    <div class="app-list">
+        
+        <!-- ১ নম্বর অ্যাপ শুরু (নিচের অংশটুকু কপি করে আরও অ্যাপ বাড়াতে পারবেন) -->
+        <div class="app-item">
+            <div class="app-info">
+                <div class="app-icon"><i class="fab fa-android"></i></div>
+                <div class="app-details">
+                    <h3>App Name 1</h3>
+                    <p>Size: 15 MB | v1.0</p>
+                </div>
+            </div>
+            <!-- href="ফাইলের-নাম.apk" এখানে আপনার আপলোড করা এপিকে ফাইলের নাম দিন -->
+            <a href="app1.apk" class="btn-download" download>Get</a>
+        </div>
+        <!-- ১ নম্বর অ্যাপ শেষ -->
+
+        <!-- ২ নম্বর অ্যাপ -->
+        <div class="app-item">
+            <div class="app-info">
+                <div class="app-icon"><i class="fas fa-rocket"></i></div>
+                <div class="app-details">
+                    <h3>App Name 2</h3>
+                    <p>Size: 25 MB | v2.1</p>
+                </div>
+            </div>
+            <a href="app2.apk" class="btn-download" download>Get</a>
+        </div>
+
+        <!-- আরও অ্যাপ যোগ করতে চাইলে উপরের কার্ডটি কপি করে নিচে পেস্ট করুন -->
+
+    </div>
+</div>
+
+</body>
+</html>
