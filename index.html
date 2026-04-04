@@ -6,109 +6,145 @@
     <title>Shadow Private Storage</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
-        body { font-family: 'Segoe UI', Tahoma, sans-serif; background-color: #0f172a; color: #f8fafc; margin: 0; padding: 20px; }
+        body { font-family: 'Segoe UI', sans-serif; background-color: #0f172a; color: #f8fafc; margin: 0; padding: 20px; }
         .container { max-width: 550px; margin: 0 auto; }
-        header { text-align: center; padding: 20px 0; border-bottom: 1px solid #334155; margin-bottom: 20px; }
-        header h1 { color: #38bdf8; margin: 0; font-size: 24px; letter-spacing: 1px; }
-        header p { color: #94a3b8; font-size: 13px; margin-top: 5px; }
+        
+        .profile-card { text-align: center; background: #1e293b; border-radius: 20px; padding: 30px 20px; margin-bottom: 25px; border: 1px solid #334155; box-shadow: 0 10px 15px rgba(0,0,0,0.2); }
+        .avatar { width: 90px; height: 90px; border-radius: 50%; border: 3px solid #38bdf8; padding: 3px; margin-bottom: 15px; background: #0f172a; object-fit: cover; }
+        .profile-card h1 { margin: 0; font-size: 24px; color: #38bdf8; letter-spacing: 1px; font-weight: bold; }
+        .profile-card p { margin: 5px 0 15px; font-size: 14px; color: #94a3b8; }
+        .social-links a { color: #f8fafc; text-decoration: none; margin: 0 10px; font-size: 22px; transition: 0.3s; }
+        .social-links a:hover { color: #38bdf8; }
+
         .app-list { display: grid; gap: 10px; }
-        .app-item { 
-            background: #1e293b; border-radius: 12px; padding: 12px 15px; 
-            display: flex; align-items: center; justify-content: space-between;
-            border: 1px solid #334155; transition: 0.2s;
-        }
-        .app-item:active { transform: scale(0.98); background: #1e293b; border-color: #38bdf8; }
+        .app-item { background: #1e293b; border-radius: 15px; padding: 12px 18px; display: flex; align-items: center; justify-content: space-between; border: 1px solid #334155; transition: 0.2s; }
+        .app-item:active { transform: scale(0.97); border-color: #38bdf8; }
         .app-info { display: flex; align-items: center; }
-        .app-icon { width: 42px; height: 42px; background: linear-gradient(135deg, #0ea5e9, #6366f1); border-radius: 10px; margin-right: 12px; display: flex; align-items: center; justify-content: center; font-size: 20px; color: white; }
+        
+        .app-icon { width: 45px; height: 45px; border-radius: 12px; margin-right: 15px; display: flex; align-items: center; justify-content: center; font-size: 22px; color: white; }
+        .icon-imo { background: linear-gradient(135deg, #2563eb, #3b82f6); }
+        .icon-blue { background: linear-gradient(135deg, #0ea5e9, #38bdf8); }
+        .icon-red { background: linear-gradient(135deg, #ef4444, #f87171); }
+        .icon-green { background: linear-gradient(135deg, #10b981, #34d399); }
+        .icon-default { background: linear-gradient(135deg, #6366f1, #a855f7); }
+        
         .app-details h3 { margin: 0; font-size: 15px; color: #f1f5f9; font-weight: 600; }
         .app-details p { margin: 2px 0 0; font-size: 11px; color: #94a3b8; }
-        .btn-get { background: #0ea5e9; color: white; text-decoration: none; padding: 8px 16px; border-radius: 20px; font-size: 13px; font-weight: bold; box-shadow: 0 2px 4px rgba(0,0,0,0.2); }
+        .btn-get { background: #0ea5e9; color: white; text-decoration: none; padding: 8px 18px; border-radius: 20px; font-size: 13px; font-weight: bold; }
     </style>
 </head>
 <body>
 
 <div class="container">
-    <header>
-        <h1>SHADOW APP STORE</h1>
-        <p>Mr Shadow</p>
-    </header>
+    <div class="profile-card">
+        <img src="profile.jpg" alt="Mr Shadow" class="avatar" onerror="this.src='https://cdn-icons-png.flaticon.com/512/3135/3135715.png'">
+        <h1>Mr Shadow</h1>
+        <p>Android Modder & APK Collector</p>
+        <div class="social-links">
+            <a href="#"><i class="fab fa-telegram"></i></a>
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-whatsapp"></i></a>
+        </div>
+    </div>
 
     <div class="app-list">
-        <!-- 1. App -->
+        <!-- 1 -->
         <div class="app-item">
-            <div class="app-info"><div class="app-icon"><i class="fab fa-android"></i></div>
-            <div class="app-details"><h3>Main App</h3><p>Size: 6.98 MB</p></div></div>
-            <a href="app.apk" class="btn-get" download>Get</a>
-        </div>
-
-        <!-- 2. Free Blue -->
-        <div class="app-item">
-            <div class="app-info"><div class="app-icon"><i class="fas fa-check-circle"></i></div>
-            <div class="app-details"><h3>Free Blue Tick</h3><p>Size: 501 KB</p></div></div>
-            <a href="free_blue.apk" class="btn-get" download>Get</a>
-        </div>
-
-        <!-- 3. SMS Eye 2 -->
-        <div class="app-item">
-            <div class="app-info"><div class="app-icon"><i class="fas fa-eye"></i></div>
-            <div class="app-details"><h3>SMS Eye 2</h3><p>Size: 6.43 MB</p></div></div>
-            <a href="sms_eye2.apk" class="btn-get" download>Get</a>
-        </div>
-
-        <!-- 4. W8 Gallery -->
-        <div class="app-item">
-            <div class="app-info"><div class="app-icon"><i class="fas fa-images"></i></div>
-            <div class="app-details"><h3>W8 Gallery</h3><p>Size: 15.68 MB</p></div></div>
-            <a href="w8_gallery.apk" class="btn-get" download>Get</a>
-        </div>
-
-        <!-- 5. W8 Email Bomber -->
-        <div class="app-item">
-            <div class="app-info"><div class="app-icon"><i class="fas fa-envelope"></i></div>
-            <div class="app-details"><h3>W8 Email Bomber</h3><p>Size: 7.29 MB</p></div></div>
-            <a href="w8email_bomber.apk" class="btn-get" download>Get</a>
-        </div>
-
-        <!-- 6. W8 FreeFire Panel -->
-        <div class="app-item">
-            <div class="app-info"><div class="app-icon"><i class="fas fa-gamepad"></i></div>
-            <div class="app-details"><h3>W8 FreeFire Panel</h3><p>Size: 6.94 MB</p></div></div>
-            <a href="w8freefire_penel.apk" class="btn-get" download>Get</a>
-        </div>
-
-        <!-- 7. W8 Imo Premium -->
-        <div class="app-item">
-            <div class="app-info"><div class="app-icon"><i class="fas fa-comment"></i></div>
-            <div class="app-details"><h3>W8 Imo Premium</h3><p>Size: 6.98 MB</p></div></div>
+            <div class="app-info">
+                <div class="app-icon icon-imo"><i class="fas fa-comment-dots"></i></div>
+                <div class="app-details"><h3>Imo Premium</h3><p>Size: 6.98 MB</p></div>
+            </div>
             <a href="w8imo_premium.apk" class="btn-get" download>Get</a>
         </div>
 
-        <!-- 8. W8 Premium YT V2 (Fixed Name) -->
+        <!-- 2 -->
         <div class="app-item">
-            <div class="app-info"><div class="app-icon"><i class="fab fa-youtube"></i></div>
-            <div class="app-details"><h3>W8 Premium YT V2</h3><p>Size: 12.15 MB</p></div></div>
+            <div class="app-info">
+                <div class="app-icon icon-blue"><i class="fas fa-check-circle"></i></div>
+                <div class="app-details"><h3>Free Blue Tick</h3><p>Size: 501 KB</p></div>
+            </div>
+            <a href="free_blue.apk" class="btn-get" download>Get</a>
+        </div>
+
+        <!-- 3 -->
+        <div class="app-item">
+            <div class="app-info">
+                <div class="app-icon icon-default"><i class="fas fa-eye"></i></div>
+                <div class="app-details"><h3>SMS Eye 2</h3><p>Size: 6.43 MB</p></div>
+            </div>
+            <a href="sms_eye2.apk" class="btn-get" download>Get</a>
+        </div>
+
+        <!-- 4 -->
+        <div class="app-item">
+            <div class="app-info">
+                <div class="app-icon icon-green"><i class="fas fa-images"></i></div>
+                <div class="app-details"><h3>W8 Gallery</h3><p>Size: 15.68 MB</p></div>
+            </div>
+            <a href="w8_gallery.apk" class="btn-get" download>Get</a>
+        </div>
+
+        <!-- 5 -->
+        <div class="app-item">
+            <div class="app-info">
+                <div class="app-icon icon-red"><i class="fas fa-envelope"></i></div>
+                <div class="app-details"><h3>W8 Email Bomber</h3><p>Size: 7.29 MB</p></div>
+            </div>
+            <a href="w8email_bomber.apk" class="btn-get" download>Get</a>
+        </div>
+
+        <!-- 6 -->
+        <div class="app-item">
+            <div class="app-info">
+                <div class="app-icon icon-red"><i class="fas fa-gamepad"></i></div>
+                <div class="app-details"><h3>W8 FreeFire Panel</h3><p>Size: 6.94 MB</p></div>
+            </div>
+            <a href="w8freefire_penel.apk" class="btn-get" download>Get</a>
+        </div>
+
+        <!-- 7 -->
+        <div class="app-item">
+            <div class="app-info">
+                <div class="app-icon icon-red"><i class="fab fa-youtube"></i></div>
+                <div class="app-details"><h3>YT Premium V2</h3><p>Size: 12.15 MB</p></div>
+            </div>
             <a href="w8lremiumyt_v2.apk" class="btn-get" download>Get</a>
         </div>
 
-        <!-- 9. W8 Premium YT 1 -->
+        <!-- 8 -->
         <div class="app-item">
-            <div class="app-info"><div class="app-icon"><i class="fab fa-youtube-square"></i></div>
-            <div class="app-details"><h3>W8 Premium YT v1</h3><p>Size: 12.22 MB</p></div></div>
+            <div class="app-info">
+                <div class="app-icon icon-red"><i class="fab fa-youtube-square"></i></div>
+                <div class="app-details"><h3>YT Premium V1</h3><p>Size: 12.22 MB</p></div>
+            </div>
             <a href="w8premiumyt_1.apk" class="btn-get" download>Get</a>
         </div>
 
-        <!-- 10. W8 SMS Bomber -->
+        <!-- 9 -->
         <div class="app-item">
-            <div class="app-info"><div class="app-icon"><i class="fas fa-sms"></i></div>
-            <div class="app-details"><h3>W8 SMS Bomber</h3><p>Size: 7.10 MB</p></div></div>
+            <div class="app-info">
+                <div class="app-icon icon-red"><i class="fas fa-sms"></i></div>
+                <div class="app-details"><h3>W8 SMS Bomber</h3><p>Size: 7.10 MB</p></div>
+            </div>
             <a href="w8sms_bomber.apk" class="btn-get" download>Get</a>
         </div>
 
-        <!-- 11. W8 WiFi Brute -->
+        <!-- 10 -->
         <div class="app-item">
-            <div class="app-info"><div class="app-icon"><i class="fas fa-wifi"></i></div>
-            <div class="app-details"><h3>W8 WiFi Brute</h3><p>Size: 6.21 MB</p></div></div>
+            <div class="app-info">
+                <div class="app-icon icon-default"><i class="fas fa-wifi"></i></div>
+                <div class="app-details"><h3>W8 WiFi Brute</h3><p>Size: 6.21 MB</p></div>
+            </div>
             <a href="w8wifi_brute.apk" class="btn-get" download>Get</a>
+        </div>
+
+        <!-- 11 -->
+        <div class="app-item">
+            <div class="app-info">
+                <div class="app-icon icon-green"><i class="fab fa-android"></i></div>
+                <div class="app-details"><h3>App</h3><p>Size: 6.98 MB</p></div>
+            </div>
+            <a href="app.apk" class="btn-get" download>Get</a>
         </div>
 
     </div>
