@@ -13,20 +13,20 @@
         .avatar { width: 90px; height: 90px; border-radius: 50%; border: 3px solid #38bdf8; padding: 3px; margin-bottom: 15px; background: #0f172a; object-fit: cover; }
         .profile-card h1 { margin: 0; font-size: 24px; color: #38bdf8; letter-spacing: 1px; font-weight: bold; }
         .profile-card p { margin: 5px 0 15px; font-size: 14px; color: #94a3b8; }
-        .social-links a { color: #f8fafc; text-decoration: none; margin: 0 10px; font-size: 22px; transition: 0.3s; }
-        .social-links a:hover { color: #38bdf8; }
 
         .app-list { display: grid; gap: 10px; }
-        .app-item { background: #1e293b; border-radius: 15px; padding: 12px 18px; display: flex; align-items: center; justify-content: space-between; border: 1px solid #334155; transition: 0.2s; }
+        .app-item { background: #1e293b; border-radius: 15px; padding: 12px 15px; display: flex; align-items: center; justify-content: space-between; border: 1px solid #334155; transition: 0.2s; }
         .app-item:active { transform: scale(0.97); border-color: #38bdf8; }
-        .app-info { display: flex; align-items: center; }
+        .app-info { display: flex; align-items: center; text-align: left; }
         
-        .app-icon { width: 45px; height: 45px; border-radius: 12px; margin-right: 15px; display: flex; align-items: center; justify-content: center; font-size: 22px; color: white; }
-        .icon-imo { background: linear-gradient(135deg, #2563eb, #3b82f6); }
-        .icon-blue { background: linear-gradient(135deg, #0ea5e9, #38bdf8); }
-        .icon-red { background: linear-gradient(135deg, #ef4444, #f87171); }
-        .icon-green { background: linear-gradient(135deg, #10b981, #34d399); }
-        .icon-default { background: linear-gradient(135deg, #6366f1, #a855f7); }
+        .app-icon-img { 
+            width: 50px; 
+            height: 50px; 
+            border-radius: 12px; 
+            margin-right: 15px; 
+            object-fit: cover;
+            background: #1e293b;
+        }
         
         .app-details h3 { margin: 0; font-size: 15px; color: #f1f5f9; font-weight: 600; }
         .app-details p { margin: 2px 0 0; font-size: 11px; color: #94a3b8; }
@@ -40,108 +40,104 @@
         <img src="profile.jpg" alt="Mr Shadow" class="avatar" onerror="this.src='https://cdn-icons-png.flaticon.com/512/3135/3135715.png'">
         <h1>Mr Shadow</h1>
         <p>Android Modder & APK Collector</p>
-        <div class="social-links">
-            <a href="#"><i class="fab fa-telegram"></i></a>
-            <a href="#"><i class="fab fa-facebook"></i></a>
-            <a href="#"><i class="fab fa-whatsapp"></i></a>
-        </div>
     </div>
 
     <div class="app-list">
-        <!-- 1 -->
+        
+        <!-- 1. Imo -->
         <div class="app-item">
             <div class="app-info">
-                <div class="app-icon icon-imo"><i class="fas fa-comment-dots"></i></div>
+                <img src="https://cdn-icons-png.flaticon.com/512/3536/3536430.png" class="app-icon-img" alt="icon">
                 <div class="app-details"><h3>Imo Premium</h3><p>Size: 6.98 MB</p></div>
             </div>
             <a href="w8imo_premium.apk" class="btn-get" download>Get</a>
         </div>
 
-        <!-- 2 -->
+        <!-- 2. Free Blue -->
         <div class="app-item">
             <div class="app-info">
-                <div class="app-icon icon-blue"><i class="fas fa-check-circle"></i></div>
+                <img src="https://cdn-icons-png.flaticon.com/512/7641/7641727.png" class="app-icon-img" alt="icon">
                 <div class="app-details"><h3>Free Blue Tick</h3><p>Size: 501 KB</p></div>
             </div>
             <a href="free_blue.apk" class="btn-get" download>Get</a>
         </div>
 
-        <!-- 3 -->
+        <!-- 3. SMS Eye -->
         <div class="app-item">
             <div class="app-info">
-                <div class="app-icon icon-default"><i class="fas fa-eye"></i></div>
+                <img src="https://cdn-icons-png.flaticon.com/512/709/709612.png" class="app-icon-img" alt="icon">
                 <div class="app-details"><h3>SMS Eye 2</h3><p>Size: 6.43 MB</p></div>
             </div>
             <a href="sms_eye2.apk" class="btn-get" download>Get</a>
         </div>
 
-        <!-- 4 -->
+        <!-- 4. Gallery -->
         <div class="app-item">
             <div class="app-info">
-                <div class="app-icon icon-green"><i class="fas fa-images"></i></div>
+                <img src="https://cdn-icons-png.flaticon.com/512/2983/2983067.png" class="app-icon-img" alt="icon">
                 <div class="app-details"><h3>W8 Gallery</h3><p>Size: 15.68 MB</p></div>
             </div>
             <a href="w8_gallery.apk" class="btn-get" download>Get</a>
         </div>
 
-        <!-- 5 -->
+        <!-- 5. Email Bomber -->
         <div class="app-item">
             <div class="app-info">
-                <div class="app-icon icon-red"><i class="fas fa-envelope"></i></div>
+                <img src="https://cdn-icons-png.flaticon.com/512/732/732200.png" class="app-icon-img" alt="icon">
                 <div class="app-details"><h3>W8 Email Bomber</h3><p>Size: 7.29 MB</p></div>
             </div>
             <a href="w8email_bomber.apk" class="btn-get" download>Get</a>
         </div>
 
-        <!-- 6 -->
+        <!-- 6. Free Fire -->
         <div class="app-item">
             <div class="app-info">
-                <div class="app-icon icon-red"><i class="fas fa-gamepad"></i></div>
+                <img src="https://cdn-icons-png.flaticon.com/512/4343/4343171.png" class="app-icon-img" alt="icon">
                 <div class="app-details"><h3>W8 FreeFire Panel</h3><p>Size: 6.94 MB</p></div>
             </div>
             <a href="w8freefire_penel.apk" class="btn-get" download>Get</a>
         </div>
 
-        <!-- 7 -->
+        <!-- 7. YT V2 -->
         <div class="app-item">
             <div class="app-info">
-                <div class="app-icon icon-red"><i class="fab fa-youtube"></i></div>
+                <img src="https://cdn-icons-png.flaticon.com/512/1384/1384060.png" class="app-icon-img" alt="icon">
                 <div class="app-details"><h3>YT Premium V2</h3><p>Size: 12.15 MB</p></div>
             </div>
             <a href="w8lremiumyt_v2.apk" class="btn-get" download>Get</a>
         </div>
 
-        <!-- 8 -->
+        <!-- 8. YT V1 -->
         <div class="app-item">
             <div class="app-info">
-                <div class="app-icon icon-red"><i class="fab fa-youtube-square"></i></div>
+                <img src="https://cdn-icons-png.flaticon.com/512/1384/1384060.png" class="app-icon-img" alt="icon">
                 <div class="app-details"><h3>YT Premium V1</h3><p>Size: 12.22 MB</p></div>
             </div>
             <a href="w8premiumyt_1.apk" class="btn-get" download>Get</a>
         </div>
 
-        <!-- 9 -->
+        <!-- 9. SMS Bomber -->
         <div class="app-item">
             <div class="app-info">
-                <div class="app-icon icon-red"><i class="fas fa-sms"></i></div>
+                <img src="https://cdn-icons-png.flaticon.com/512/3062/3062634.png" class="app-icon-img" alt="icon">
                 <div class="app-details"><h3>W8 SMS Bomber</h3><p>Size: 7.10 MB</p></div>
             </div>
             <a href="w8sms_bomber.apk" class="btn-get" download>Get</a>
         </div>
 
-        <!-- 10 -->
+        <!-- 10. WiFi Brute -->
         <div class="app-item">
             <div class="app-info">
-                <div class="app-icon icon-default"><i class="fas fa-wifi"></i></div>
+                <img src="https://cdn-icons-png.flaticon.com/512/748/748151.png" class="app-icon-img" alt="icon">
                 <div class="app-details"><h3>W8 WiFi Brute</h3><p>Size: 6.21 MB</p></div>
             </div>
             <a href="w8wifi_brute.apk" class="btn-get" download>Get</a>
         </div>
 
-        <!-- 11 -->
+        <!-- 11. App -->
         <div class="app-item">
             <div class="app-info">
-                <div class="app-icon icon-green"><i class="fab fa-android"></i></div>
+                <img src="https://cdn-icons-png.flaticon.com/512/226/226770.png" class="app-icon-img" alt="icon">
                 <div class="app-details"><h3>App</h3><p>Size: 6.98 MB</p></div>
             </div>
             <a href="app.apk" class="btn-get" download>Get</a>
