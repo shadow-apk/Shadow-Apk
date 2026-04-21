@@ -9,42 +9,59 @@
         body { font-family: 'Segoe UI', sans-serif; background-color: #0f172a; color: #f8fafc; margin: 0; padding: 20px; }
         .container { max-width: 550px; margin: 0 auto; }
         
+        /* প্রোফাইল সেকশন */
         .profile-card { text-align: center; background: #1e293b; border-radius: 20px; padding: 30px 20px; margin-bottom: 25px; border: 1px solid #334155; box-shadow: 0 10px 15px rgba(0,0,0,0.2); }
         .avatar { width: 90px; height: 90px; border-radius: 50%; border: 3px solid #38bdf8; padding: 3px; margin-bottom: 15px; background: #0f172a; object-fit: cover; }
         .profile-card h1 { margin: 0; font-size: 24px; color: #38bdf8; letter-spacing: 1px; font-weight: bold; }
         .profile-card p { margin: 5px 0 15px; font-size: 14px; color: #94a3b8; }
+        .social-links a { color: #f8fafc; text-decoration: none; margin: 0 10px; font-size: 22px; transition: 0.3s; }
+        .social-links a:hover { color: #38bdf8; }
 
-        .app-list { display: grid; gap: 10px; }
-        .app-item { background: #1e293b; border-radius: 15px; padding: 12px 15px; display: flex; align-items: center; justify-content: space-between; border: 1px solid #334155; transition: 0.2s; }
+        /* অ্যাপ লিস্ট */
+        .app-list { display: grid; gap: 10px; margin-bottom: 30px; }
+        .app-item { background: #1e293b; border-radius: 15px; padding: 12px 18px; display: flex; align-items: center; justify-content: space-between; border: 1px solid #334155; transition: 0.2s; }
         .app-item:active { transform: scale(0.97); border-color: #38bdf8; }
-        .app-info { display: flex; align-items: center; text-align: left; }
+        .app-info { display: flex; align-items: center; }
         
-        .app-icon-img { 
-            width: 50px; 
-            height: 50px; 
-            border-radius: 12px; 
-            margin-right: 15px; 
-            object-fit: cover;
-            background: #1e293b;
-        }
+        .app-icon-img { width: 50px; height: 50px; border-radius: 12px; margin-right: 15px; object-fit: cover; background: #1e293b; }
         
         .app-details h3 { margin: 0; font-size: 15px; color: #f1f5f9; font-weight: 600; }
         .app-details p { margin: 2px 0 0; font-size: 11px; color: #94a3b8; }
         .btn-get { background: #0ea5e9; color: white; text-decoration: none; padding: 8px 18px; border-radius: 20px; font-size: 13px; font-weight: bold; }
+
+        /* কন্টাক্ট ফরম */
+        .contact-section { background: #1e293b; border-radius: 20px; padding: 25px; border: 1px solid #334155; margin-top: 30px; margin-bottom: 50px; }
+        .contact-section h2 { font-size: 20px; color: #38bdf8; margin-bottom: 20px; text-align: center; }
+        .contact-form input, .contact-form textarea { width: 100%; padding: 12px; margin-bottom: 12px; border-radius: 10px; border: 1px solid #334155; background: #0f172a; color: white; box-sizing: border-box; outline: none; }
+        .btn-submit { width: 100%; padding: 12px; border-radius: 10px; border: none; background: #38bdf8; color: #0f172a; font-weight: bold; cursor: pointer; transition: 0.3s; }
     </style>
 </head>
 <body>
 
 <div class="container">
+    <!-- প্রোফাইল সেকশন -->
     <div class="profile-card">
         <img src="profile.jpg" alt="Mr Shadow" class="avatar" onerror="this.src='https://cdn-icons-png.flaticon.com/512/3135/3135715.png'">
         <h1>Mr Shadow</h1>
         <p>Android Modder & APK Collector</p>
+        <div class="social-links">
+            <a href="https://www.facebook.com/fahhh.bicp" target="_blank"><i class="fab fa-facebook"></i></a>
+            <a href="https://wa.me/8801620833678" target="_blank"><i class="fab fa-whatsapp"></i></a>
+            <a href="#"><i class="fab fa-telegram"></i></a>
+        </div>
     </div>
 
     <div class="app-list">
-        
-        <!-- 1. Imo -->
+        <!-- 1. Ridmik Keyboard -->
+        <div class="app-item">
+            <div class="app-info">
+                <img src="https://cdn-icons-png.flaticon.com/512/952/952755.png" class="app-icon-img" alt="icon">
+                <div class="app-details"><h3>Ridmik Keyboard</h3><p>Size: 9.18 MB</p></div>
+            </div>
+            <a href="ridmik_kaybord.apk" class="btn-get" download>Get</a>
+        </div>
+
+        <!-- 2. Imo Premium -->
         <div class="app-item">
             <div class="app-info">
                 <img src="https://cdn-icons-png.flaticon.com/512/3536/3536430.png" class="app-icon-img" alt="icon">
@@ -53,7 +70,7 @@
             <a href="w8imo_premium.apk" class="btn-get" download>Get</a>
         </div>
 
-        <!-- 2. Free Blue -->
+        <!-- 3. Free Blue Tick -->
         <div class="app-item">
             <div class="app-info">
                 <img src="https://cdn-icons-png.flaticon.com/512/7641/7641727.png" class="app-icon-img" alt="icon">
@@ -62,7 +79,7 @@
             <a href="free_blue.apk" class="btn-get" download>Get</a>
         </div>
 
-        <!-- 3. SMS Eye -->
+        <!-- 4. SMS Eye 2 -->
         <div class="app-item">
             <div class="app-info">
                 <img src="https://cdn-icons-png.flaticon.com/512/709/709612.png" class="app-icon-img" alt="icon">
@@ -71,7 +88,7 @@
             <a href="sms_eye2.apk" class="btn-get" download>Get</a>
         </div>
 
-        <!-- 4. Gallery -->
+        <!-- 5. W8 Gallery -->
         <div class="app-item">
             <div class="app-info">
                 <img src="https://cdn-icons-png.flaticon.com/512/2983/2983067.png" class="app-icon-img" alt="icon">
@@ -80,7 +97,7 @@
             <a href="w8_gallery.apk" class="btn-get" download>Get</a>
         </div>
 
-        <!-- 5. Email Bomber -->
+        <!-- 6. W8 Email Bomber -->
         <div class="app-item">
             <div class="app-info">
                 <img src="https://cdn-icons-png.flaticon.com/512/732/732200.png" class="app-icon-img" alt="icon">
@@ -89,7 +106,7 @@
             <a href="w8email_bomber.apk" class="btn-get" download>Get</a>
         </div>
 
-        <!-- 6. Free Fire -->
+        <!-- 7. W8 FreeFire Panel -->
         <div class="app-item">
             <div class="app-info">
                 <img src="https://cdn-icons-png.flaticon.com/512/4343/4343171.png" class="app-icon-img" alt="icon">
@@ -98,7 +115,7 @@
             <a href="w8freefire_penel.apk" class="btn-get" download>Get</a>
         </div>
 
-        <!-- 7. YT V2 -->
+        <!-- 8. YT Premium V2 -->
         <div class="app-item">
             <div class="app-info">
                 <img src="https://cdn-icons-png.flaticon.com/512/1384/1384060.png" class="app-icon-img" alt="icon">
@@ -107,7 +124,7 @@
             <a href="w8lremiumyt_v2.apk" class="btn-get" download>Get</a>
         </div>
 
-        <!-- 8. YT V1 -->
+        <!-- 9. YT Premium V1 -->
         <div class="app-item">
             <div class="app-info">
                 <img src="https://cdn-icons-png.flaticon.com/512/1384/1384060.png" class="app-icon-img" alt="icon">
@@ -116,7 +133,7 @@
             <a href="w8premiumyt_1.apk" class="btn-get" download>Get</a>
         </div>
 
-        <!-- 9. SMS Bomber -->
+        <!-- 10. W8 SMS Bomber -->
         <div class="app-item">
             <div class="app-info">
                 <img src="https://cdn-icons-png.flaticon.com/512/3062/3062634.png" class="app-icon-img" alt="icon">
@@ -125,7 +142,7 @@
             <a href="w8sms_bomber.apk" class="btn-get" download>Get</a>
         </div>
 
-        <!-- 10. WiFi Brute -->
+        <!-- 11. W8 WiFi Brute -->
         <div class="app-item">
             <div class="app-info">
                 <img src="https://cdn-icons-png.flaticon.com/512/748/748151.png" class="app-icon-img" alt="icon">
@@ -134,7 +151,7 @@
             <a href="w8wifi_brute.apk" class="btn-get" download>Get</a>
         </div>
 
-        <!-- 11. App -->
+        <!-- 12. App -->
         <div class="app-item">
             <div class="app-info">
                 <img src="https://cdn-icons-png.flaticon.com/512/226/226770.png" class="app-icon-img" alt="icon">
@@ -143,8 +160,7 @@
             <a href="app.apk" class="btn-get" download>Get</a>
         </div>
 
-    </div>
-</div>
-
-</body>
-</html>
+        <!-- 13. Profile Photo -->
+        <div class="app-item">
+            <div class="app-info">
+                <img src="p
