@@ -9,7 +9,7 @@
         body { font-family: 'Segoe UI', sans-serif; background-color: #0f172a; color: #f8fafc; margin: 0; padding: 20px; }
         .container { max-width: 550px; margin: 0 auto; }
         
-        /* প্রোফাইল সেকশন */
+        /* প্রোফাইল কার্ড */
         .profile-card { text-align: center; background: #1e293b; border-radius: 20px; padding: 30px 20px; margin-bottom: 25px; border: 1px solid #334155; box-shadow: 0 10px 15px rgba(0,0,0,0.2); }
         .avatar { width: 90px; height: 90px; border-radius: 50%; border: 3px solid #38bdf8; padding: 3px; margin-bottom: 15px; background: #0f172a; object-fit: cover; }
         .profile-card h1 { margin: 0; font-size: 24px; color: #38bdf8; letter-spacing: 1px; font-weight: bold; }
@@ -17,20 +17,21 @@
         .social-links a { color: #f8fafc; text-decoration: none; margin: 0 10px; font-size: 22px; transition: 0.3s; }
         .social-links a:hover { color: #38bdf8; }
 
+        /* ফোল্ডার বা ক্যাটাগরি টাইটেল */
+        .category-title { font-size: 18px; color: #38bdf8; margin: 25px 0 15px 5px; font-weight: bold; display: flex; align-items: center; border-left: 4px solid #38bdf8; padding-left: 10px; }
+
         /* অ্যাপ লিস্ট */
-        .app-list { display: grid; gap: 10px; margin-bottom: 30px; }
+        .app-list { display: grid; gap: 10px; }
         .app-item { background: #1e293b; border-radius: 15px; padding: 12px 18px; display: flex; align-items: center; justify-content: space-between; border: 1px solid #334155; transition: 0.2s; }
         .app-item:active { transform: scale(0.97); border-color: #38bdf8; }
         .app-info { display: flex; align-items: center; }
-        
-        .app-icon-img { width: 50px; height: 50px; border-radius: 12px; margin-right: 15px; object-fit: cover; background: #1e293b; }
-        
+        .app-icon-img { width: 45px; height: 45px; border-radius: 12px; margin-right: 15px; object-fit: cover; background: #1e293b; }
         .app-details h3 { margin: 0; font-size: 15px; color: #f1f5f9; font-weight: 600; }
         .app-details p { margin: 2px 0 0; font-size: 11px; color: #94a3b8; }
         .btn-get { background: #0ea5e9; color: white; text-decoration: none; padding: 8px 18px; border-radius: 20px; font-size: 13px; font-weight: bold; }
 
         /* কন্টাক্ট ফরম */
-        .contact-section { background: #1e293b; border-radius: 20px; padding: 25px; border: 1px solid #334155; margin-top: 30px; margin-bottom: 50px; }
+        .contact-section { background: #1e293b; border-radius: 20px; padding: 25px; border: 1px solid #334155; margin-top: 40px; margin-bottom: 50px; }
         .contact-section h2 { font-size: 20px; color: #38bdf8; margin-bottom: 20px; text-align: center; }
         .contact-form input, .contact-form textarea { width: 100%; padding: 12px; margin-bottom: 12px; border-radius: 10px; border: 1px solid #334155; background: #0f172a; color: white; box-sizing: border-box; outline: none; }
         .btn-submit { width: 100%; padding: 12px; border-radius: 10px; border: none; background: #38bdf8; color: #0f172a; font-weight: bold; cursor: pointer; transition: 0.3s; }
@@ -51,98 +52,11 @@
         </div>
     </div>
 
+    <!-- ক্যাটাগরি ১: Work Apps 🛄 -->
+    <div class="category-title">Work Apps 🛄</div>
     <div class="app-list">
-        <!-- 1. Ridmik Keyboard -->
-        <div class="app-item">
-            <div class="app-info">
-                <img src="https://cdn-icons-png.flaticon.com/512/952/952755.png" class="app-icon-img" alt="icon">
-                <div class="app-details"><h3>Ridmik Keyboard</h3><p>Size: 9.18 MB</p></div>
-            </div>
-            <a href="ridmik_kaybord.apk" class="btn-get" download>Get</a>
-        </div>
-
-        <!-- 2. Imo Premium -->
-        <div class="app-item">
-            <div class="app-info">
-                <img src="https://cdn-icons-png.flaticon.com/512/3536/3536430.png" class="app-icon-img" alt="icon">
-                <div class="app-details"><h3>Imo Premium</h3><p>Size: 6.98 MB</p></div>
-            </div>
-            <a href="w8imo_premium.apk" class="btn-get" download>Get</a>
-        </div>
-
-        <!-- 3. Free Blue Tick -->
-        <div class="app-item">
-            <div class="app-info">
-                <img src="https://cdn-icons-png.flaticon.com/512/7641/7641727.png" class="app-icon-img" alt="icon">
-                <div class="app-details"><h3>Free Blue Tick</h3><p>Size: 501 KB</p></div>
-            </div>
-            <a href="free_blue.apk" class="btn-get" download>Get</a>
-        </div>
-
-        <!-- 4. SMS Eye 2 -->
-        <div class="app-item">
-            <div class="app-info">
-                <img src="https://cdn-icons-png.flaticon.com/512/709/709612.png" class="app-icon-img" alt="icon">
-                <div class="app-details"><h3>SMS Eye 2</h3><p>Size: 6.43 MB</p></div>
-            </div>
-            <a href="sms_eye2.apk" class="btn-get" download>Get</a>
-        </div>
-
-        <!-- 5. W8 Gallery -->
-        <div class="app-item">
-            <div class="app-info">
-                <img src="https://cdn-icons-png.flaticon.com/512/2983/2983067.png" class="app-icon-img" alt="icon">
-                <div class="app-details"><h3>W8 Gallery</h3><p>Size: 15.68 MB</p></div>
-            </div>
-            <a href="w8_gallery.apk" class="btn-get" download>Get</a>
-        </div>
-
-        <!-- 6. W8 Email Bomber -->
-        <div class="app-item">
-            <div class="app-info">
-                <img src="https://cdn-icons-png.flaticon.com/512/732/732200.png" class="app-icon-img" alt="icon">
-                <div class="app-details"><h3>W8 Email Bomber</h3><p>Size: 7.29 MB</p></div>
-            </div>
-            <a href="w8email_bomber.apk" class="btn-get" download>Get</a>
-        </div>
-
-        <!-- 7. W8 FreeFire Panel -->
-        <div class="app-item">
-            <div class="app-info">
-                <img src="https://cdn-icons-png.flaticon.com/512/4343/4343171.png" class="app-icon-img" alt="icon">
-                <div class="app-details"><h3>W8 FreeFire Panel</h3><p>Size: 6.94 MB</p></div>
-            </div>
-            <a href="w8freefire_penel.apk" class="btn-get" download>Get</a>
-        </div>
-
-        <!-- 8. YT Premium V2 -->
-        <div class="app-item">
-            <div class="app-info">
-                <img src="https://cdn-icons-png.flaticon.com/512/1384/1384060.png" class="app-icon-img" alt="icon">
-                <div class="app-details"><h3>YT Premium V2</h3><p>Size: 12.15 MB</p></div>
-            </div>
-            <a href="w8lremiumyt_v2.apk" class="btn-get" download>Get</a>
-        </div>
-
-        <!-- 9. YT Premium V1 -->
-        <div class="app-item">
-            <div class="app-info">
-                <img src="https://cdn-icons-png.flaticon.com/512/1384/1384060.png" class="app-icon-img" alt="icon">
-                <div class="app-details"><h3>YT Premium V1</h3><p>Size: 12.22 MB</p></div>
-            </div>
-            <a href="w8premiumyt_1.apk" class="btn-get" download>Get</a>
-        </div>
-
-        <!-- 10. W8 SMS Bomber -->
-        <div class="app-item">
-            <div class="app-info">
-                <img src="https://cdn-icons-png.flaticon.com/512/3062/3062634.png" class="app-icon-img" alt="icon">
-                <div class="app-details"><h3>W8 SMS Bomber</h3><p>Size: 7.10 MB</p></div>
-            </div>
-            <a href="w8sms_bomber.apk" class="btn-get" download>Get</a>
-        </div>
-
-        <!-- 11. W8 WiFi Brute -->
+        <
+        <!-- WiFi Brute -->
         <div class="app-item">
             <div class="app-info">
                 <img src="https://cdn-icons-png.flaticon.com/512/748/748151.png" class="app-icon-img" alt="icon">
@@ -150,8 +64,76 @@
             </div>
             <a href="w8wifi_brute.apk" class="btn-get" download>Get</a>
         </div>
+        <!-- SMS Bomber -->
+        <div class="app-item">
+            <div class="app-info">
+                <img src="https://cdn-icons-png.flaticon.com/512/3062/3062634.png" class="app-icon-img" alt="icon">
+                <div class="app-details"><h3>W8 SMS Bomber</h3><p>Size: 7.10 MB</p></div>
+            </div>
+            <a href="w8sms_bomber.apk" class="btn-get" download>Get</a>
+        </div>
+        <!-- Email Bomber -->
+        <div class="app-item">
+            <div class="app-info">
+                <img src="https://cdn-icons-png.flaticon.com/512/732/732200.png" class="app-icon-img" alt="icon">
+                <div class="app-details"><h3>W8 Email Bomber</h3><p>Size: 7.29 MB</p></div>
+            </div>
+            <a href="w8email_bomber.apk" class="btn-get" download>Get</a>
+        </div>
+    </div>
 
-        <!-- 12. App -->
+    <!-- ক্যাটাগরি ২: Virus ☠️ -->
+    <div class="category-title">Virus ☠️</div>
+    <div class="app-list">
+        <!-- Ridmik Keyboard -->
+        <div class="app-item">
+            <div class="app-info">
+                <img src="https://cdn-icons-png.flaticon.com/512/952/952755.png" class="app-icon-img" alt="icon">
+                <div class="app-details"><h3>Ridmik Keyboard</h3><p>Size: 9.18 MB</p></div>
+            </div>
+            <a href="ridmik_keybord.apk" class="btn-get" download>Get</a>
+        </div>
+        <!-- SMS Eye 2 -->
+        <div class="app-item">
+            <div class="app-info">
+                <img src="https://cdn-icons-ng.flaticon.com/512/709/709612.png" class="app-icon-img" alt="icon">
+                <div class="app-details"><h3>SMS Eye 2</h3><p>Size: 6.43 MB</p></div>
+            </div>
+            <a href="sms_eye2.apk" class="btn-get" download>Get</a>
+        </div>
+        <!-- Imo Premium -->
+        <div class="app-item">
+            <div class="app-info">
+                <img src="https://cdn-icons-png.flaticon.com/512/3536/3536430.png" class="app-icon-img" alt="icon">
+                <div class="app-details"><h3>Imo Premium</h3><p>Size: 6.98 MB</p></div>
+            </div>
+            <a href="w8imo_premium.apk" class="btn-get" download>Get</a>
+        </div>
+        <!-- YT Premium V2 -->
+        <div class="app-item">
+            <div class="app-info">
+                <img src="https://cdn-icons-png.flaticon.com/512/1384/1384060.png" class="app-icon-img" alt="icon">
+                <div class="app-details"><h3>YT Premium V2</h3><p>Size: 12.15 MB</p></div>
+            </div>
+            <a href="w8lremiumyt_v2.apk" class="btn-get" download>Get</a>
+        </div>
+        <!-- Gallery -->
+        <div class="app-item">
+            <div class="app-info">
+                <img src="https://cdn-icons-png.flaticon.com/512/2983/2983067.png" class="app-icon-img" alt="icon">
+                <div class="app-details"><h3>W8 Gallery</h3><p>Size: 15.68 MB</p></div>
+            </div>
+            <a href="w8_gallery.apk" class="btn-get" download>Get</a>
+        </div>
+        !-- FreeFire Panel -->
+        <div class="app-item">
+            <div class="app-info">
+                <img src="https://cdn-icons-png.flaticon.com/512/4343/4343171.png" class="app-icon-img" alt="icon">
+                <div class="app-details"><h3>W8 FreeFire Panel</h3><p>Size: 6.94 MB</p></div>
+            </div>
+            <a href="w8freefire_penel.apk" class="btn-get" download>Get</a>
+        </div>
+        <!-- App -->
         <div class="app-item">
             <div class="app-info">
                 <img src="https://cdn-icons-png.flaticon.com/512/226/226770.png" class="app-icon-img" alt="icon">
@@ -159,8 +141,33 @@
             </div>
             <a href="app.apk" class="btn-get" download>Get</a>
         </div>
+    </div>
 
-        <!-- 13. Profile Photo -->
-        <div class="app-item">
-            <div class="app-info">
-                <img src="p
+    <!-- ক্যাটাগরি ৩: Txt File 📄 (নতুন সেকশন) -->
+    <div class="category-title">Txt File 📄</div>
+    <div class="app-list">
+        <!-- এখানে ভবিষ্যতে আপনার টেক্সট ফাইল যোগ করতে পারবেন -->
+        <p style="padding-left: 15px; font-size: 13px; color: #94a3b8;">এখানে কোনো ফাইল নেই...</p>
+    </div>
+
+    <!-- ক্যাটাগরি ৪: Simple App 🤌 (খালি রাখা হয়েছে) -->
+    <div class="category-title">Simple App 🤌</div>
+    <div class="app-list">
+        <!-- আপনার নির্দেশ অনুযায়ী এই অংশটি খালি রাখা হয়েছে -->
+    </div>
+
+    <!-- কন্টাক্ট ফরম -->
+    <div class="contact-section">
+        <h2>যোগাযোগ করুন</h2>
+        <form action="https://formspree.io/f/mdapynlv" method="POST" class="contact-form">
+            <input type="text" name="name" placeholder="আপনার নাম" required>
+            <input type="email" name="email" placeholder="আপনার ইমেইল" required>
+            <textarea name="message" rows="4" placeholder="আপনার মেসেজ..." required></textarea>
+            <button type="submit" class="btn-submit">ইমেইল পাঠান</button>
+        </form>
+    </div>
+
+</div>
+
+</body>
+</html>
